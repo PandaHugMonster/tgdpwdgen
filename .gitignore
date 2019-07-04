@@ -1,5 +1,10 @@
 # Prerequisites
 *.d
+.idea
+
+cmake-build-debug
+
+example-main.c
 
 # Object files
 *.o
