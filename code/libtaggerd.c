@@ -13,7 +13,7 @@
 #include <string.h>
 #include <time.h>
 #include <stdio.h>
-#include "libtaggerd.h"
+#include "../headers/libtaggerd.h"
 
 const char * tgd_get_lib_version() {
     return LIBTGD_VERSION;

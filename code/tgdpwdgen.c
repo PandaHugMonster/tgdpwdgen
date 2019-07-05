@@ -3,13 +3,13 @@
 //
 
 #include <stdlib.h>
-#include "tgdpwdgen.h"
+#include "../headers/tgdpwdgen.h"
 #include <libnotify/notify.h>
 #include <png.h>
 #include <string.h>
 #include <qrencode.h>
-#include "libtaggerd.h"
-#include "libtaggerdgui.h"
+#include "../headers/libtaggerd.h"
+#include "../headers/libtaggerdgui.h"
 
 #define TGDPWDGEN_SOFTWARE_NAME "New Password Generator"
 
@@ -269,7 +269,7 @@ void on_generate_password_clicked(GtkButton * button, gpointer data) {
 
 GtkBuilder* tgd_builder_new() {
     GtkBuilder * builder = gtk_builder_new();
-    if (gtk_builder_add_from_file(builder, "window.ui", &tgd_error) == 0) {
+    if (gtk_builder_add_from_file(builder, "../resources/window.ui", &tgd_error) == 0) {
         g_printerr("Error loading file: %s\n", tgd_error->message);
         g_clear_error(&tgd_error);
         _exit(0);
@@ -308,10 +308,6 @@ void activate(GtkApplication *app, gpointer user_data, GtkWindow *window) {
     GtkPopoverMenu * _menu_ctx = GTK_POPOVER_MENU(gtk_builder_get_object(tgd_builder, "menu_context"));
     GtkModelButton * about_button = GTK_MODEL_BUTTON(gtk_builder_get_object(tgd_builder, "about_button"));
     tgd_about_dialog = GTK_ABOUT_DIALOG(gtk_builder_get_object(tgd_builder, "about_dialog"));
-
-//    gtk_menu_button_set_popover(_menu_btn, GTK_WIDGET(_menu_ctx));
-//    tgd_adj_min = GTK_ADJUSTMENT(gtk_builder_get_object(tgd_builder, "adj_minimum"));
-//    tgd_adj_max = GTK_ADJUSTMENT(gtk_builder_get_object(tgd_builder, "adj_maximum"));
 
     GtkCssProvider *provider = gtk_css_provider_new();
     GdkDisplay *display = gdk_display_get_default();

@@ -6,7 +6,7 @@
 #include <libnotify/notification.h>
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
-#include "libtaggerdgui.h"
+#include "../headers/libtaggerdgui.h"
 
 void tgd_cairo_draw_pixel(cairo_t *cr, double x, double y, double pixel_size) {
     cairo_set_source_rgb(cr, 0, 0, 0);

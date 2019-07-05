@@ -5,6 +5,7 @@
 cmake-build-debug
 
 example-main.c
+*.ui~
 
 # Object files
 *.o
