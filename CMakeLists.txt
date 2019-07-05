@@ -20,7 +20,7 @@ LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS} ${LIBNOTIFY_LIBRARY_DIRS} ${LIBQRENCODE_LI
 # Add other flags to the compiler
 ADD_DEFINITIONS(${GTK3_CFLAGS_OTHER})
 
-add_executable(tgdpwdgen main.c code/tgdpwdgen.c headers/tgdpwdgen.h code/libtaggerd.c headers/libtaggerd.h code/libtaggerdgui.c headers/libtaggerdgui.h)
+add_executable(tgdpwdgen main.c code/tgdpwdgen.c headers/tgdpwdgen.h code/libtaggerd.c headers/libtaggerd.h code/libtaggerdgui.c headers/libtaggerdgui.h code/tgdpwdgengui.c headers/tgdpwdgengui.h)
 
 #TARGET_LINK_LIBRARIES(tgdpwdgen ${GTK3_LIBRARIES} ${LIBNOTIFY_LIBRARIES} ${LIBQRENCODE_LIBRARIES} ${LIBPNG_LIBRARIES})
 TARGET_LINK_LIBRARIES(tgdpwdgen ${GTK3_LIBRARIES} ${LIBNOTIFY_LIBRARIES} ${LIBQRENCODE_LIBRARIES})
