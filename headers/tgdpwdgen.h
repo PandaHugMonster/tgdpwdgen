@@ -23,7 +23,6 @@
 
 #define TGDPWDGEN_DEFAULT_SET_SIZE_1 2
 #define TGDPWDGEN_DEFAULT_SET_SIZE_2 3
-#define TGDPWDGEN_DEFAULT_SET_SIZE_3 3
 
 char * do_generate(int minimum, int maximum, const char * type);
 
